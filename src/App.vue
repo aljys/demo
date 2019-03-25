@@ -6,8 +6,23 @@
 </template>
 
 <script>
+import {query} from './api/interface'
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+     return {
+       a:1
+     }
+  },
+  mounted(){
+    // console.log(install)
+   query({start:0}).then(res=>{
+     console.log(res)
+   })
+  },
+  methods:{
+      
+  }
 }
 </script>
 
