@@ -1,27 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <!-- <img src="./assets/logo.png"> -->
+    <!-- <router-view/> -->
+    <Top/>
   </div>
 </template>
 
 <script>
+import  Top from './components/view/Top'
 import {query,mock,upload} from './api/interface'
 export default {
   name: 'App',
+  components:{
+      Top
+  },
   data(){
      return {
        a:1
      }
-  },
-  mounted(){
-   query({subject_id:27622447}).then(res=>{
-     console.log(res)
-   });
-
-  mock({ type:'movie',sort:'recommend',page_limit:20,page_start:0,tag:'热门'}).then(res=>{
-     console.log(res)
-   });
   },
   methods:{
       
