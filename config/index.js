@@ -10,8 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static', // 静态资源文件夹
     assetsPublicPath: '/', // 发布路径
-    proxyTable: {},//跨域设置
-
+    proxyTable: {
+      '/': {
+        target: 'https://m.douban.com', //这里面是你要访问的IP地址
+        changeOrigin: true,     //开启代理
+        pathRewrite: {
+          '^/': ''
+      }
+    }
+  },//跨域设置
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
