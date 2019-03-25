@@ -8,9 +8,9 @@ module.exports = {
   dev: {
 
     // Paths
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    proxyTable: {},
+    assetsSubDirectory: 'static', // 静态资源文件夹
+    assetsPublicPath: '/', // 发布路径
+    proxyTable: {},//跨域设置
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
