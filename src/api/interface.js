@@ -11,25 +11,25 @@
 // 单独倒出
 export const query = params => {
   return axios({
-    url: '/rexxar/api/v2/elendil/recommend_feed',
+    url: '/j/subject_abstract',
     method: 'get',
     params
   })
 }
   
-// export const mock = params => {
+export const mock = params => {
+  return axios({
+    url: '/j/search_subjects',
+    method: 'get',
+    params
+  })
+}
+ 
+// export const upload = params => {
 //   return axios({
-//     url: '/mock',
+//     url: '/j/search_tags',
 //     method: 'get',
 //     params
-//   })
-// }
- 
-// export const upload = data => {
-//   return axios({
-//     url: '/upload',
-//     method: 'post',
-//     data
 //   })
 // }
  
@@ -37,6 +37,6 @@ export const query = params => {
 // 根绝需要进行 
 export default {
   query,
-//   mock,
-//   upload
+  mock,
+  // upload
 }

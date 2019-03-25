@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import {query} from './api/interface'
+import {query,mock,upload} from './api/interface'
 export default {
   name: 'App',
   data(){
@@ -15,10 +15,13 @@ export default {
      }
   },
   mounted(){
-    // console.log(install)
-   query({start:0}).then(res=>{
+   query({subject_id:27622447}).then(res=>{
      console.log(res)
-   })
+   });
+
+  mock({ type:'movie',sort:'recommend',page_limit:20,page_start:0,tag:'热门'}).then(res=>{
+     console.log(res)
+   });
   },
   methods:{
       

@@ -11,13 +11,20 @@ module.exports = {
     assetsSubDirectory: 'static', // 静态资源文件夹
     assetsPublicPath: '/', // 发布路径
     proxyTable: {
+      // '/': {
+      //   target: 'https://m.maizuo.com', //这里面是你要访问的IP地址
+      //   changeOrigin: true,     //开启代理
+      //   pathRewrite: {
+      //     '^/': ''
+      // },
       '/': {
-        target: 'https://m.douban.com', //这里面是你要访问的IP地址
+        target: 'https://movie.douban.com', //这里面是你要访问的IP地址
         changeOrigin: true,     //开启代理
         pathRewrite: {
           '^/': ''
       }
     }
+    
   },//跨域设置
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

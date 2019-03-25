@@ -5,7 +5,7 @@ import qs from 'qs' // 序列化请求数据，视服务端的要求
 export default function $axios (options) {
   return new Promise((resolve, reject) => {
     const instance = axios.create({
-      baseURL: config.baseURL,
+      // baseURL: config.baseURL,
       headers: {},
       transformResponse: [function (data) {}]
     }
